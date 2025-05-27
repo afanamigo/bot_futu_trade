@@ -1,0 +1,23 @@
+# web ????
+server:
+  port: 8189
+  shutdown: GRACEFUL
+  servlet:
+    context-path: /${spring.application.name}
+
+# spring ??
+spring:
+  application:
+    name: at-trade
+
+moomoo:
+  accid: 974142
+
+# rocket mq配置
+rocketmq:
+  name-server: 209.182.237.103:9876
+  consumer:
+    group: at-trade
+  producer:
+    group: at-trade-producer
+    send-message-timeout: 300000
